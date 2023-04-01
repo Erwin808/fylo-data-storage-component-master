@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 45%, 43%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: repeat-x;
+    background-position: 0% -60%;
+    background-color: var(--Very-Dark-Blue);
+}
+.container {
+    width: 950px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-80%);
+    display: flex;
+    flex-direction: row;
+}
+.box1 {
+    width: 350px;
+    height: 200px;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    margin-right: 30px;
+    padding: 40px;
+}
+.icons {
+    width: 175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.icons div {
+    width: 50px;
+    height: 50px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    position: relative;
+}
+.icons img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+.box2 {
+    width: 570px;
+    height: 150px;
+    color: white;
+    background-color: var(--Dark-Blue);
+    align-self: flex-end;
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+}
+.box2 p {
+    opacity: 0.7;
+}
+.box2 p span {
+    font-size: larger;
+    font-weight: 700;
+}
+.con-memory {
+    width: 500px;
+    height: 20px;
+    background-color: var(--Very-Dark-Blue);
+    border: 3px solid var(--Very-Dark-Blue);
+    border-radius: 10px;
+    margin: 20px 0 10px;
+}
+.memory {
+    width: 390px;
+    height: 14px;
+    background-image: linear-gradient(to right ,hsl(6, 100%, 80%) ,hsl(335, 45%, 43%));
+    position: relative;
+    border-radius: 10px;
+}
+.memory::before {
+    content: "";
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1px;
+    right: 3px;
+}
+.left {
+    width: 175px;
+    height: 75px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    line-height: 75px;
+    border-radius: 10px;
+    position: absolute;
+    top: -50px;
+    right: 30px;
+}
+.left :first-child {
+    font-size: 40px;
+    font-weight: 600;
+}
+.left :last-child {
+    opacity: 0.6;
+    font-weight: 600;
+    font-size: small;
+    text-transform: uppercase;
+}
+.left::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border: 20px solid;
+    border-color: transparent white transparent transparent;
+}
+.gb {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Mobile screen */
+@media (max-width: 427px) {
+    .container {
+        width: 350px;
+        height: 510px;
+        flex-direction: column;
+    }
+    .box1 {
+        width: 351px;
+        margin: 100px 0 20px;
+    }
+    .box2 {
+        width: 351px;
+        height: 190px;
+    }
+    .con-memory {
+        width: 290px;
+    }
+    .memory {
+        width: 210px;
+    }
+    .left {
+        top: 150px;
+        left: 90px;
+    }
+    .left::before {
+        display: none;
+    }
+    .gb {
+        width: 290px;
+    }
+}
